@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stayyoung/features/games/screens/games_screen.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_text_styles.dart';
 import '../../home/screens/home_screen.dart';
@@ -16,7 +17,7 @@ class _MainShellState extends State<MainShell> {
   // As we build new screens we'll swap the placeholders out one by one
   final List<Widget> _screens = const [
     HomeScreen(),
-    _PlaceholderScreen(emoji: '🧩', label: 'Games'),
+    GamesScreen(),
     _PlaceholderScreen(emoji: '✅', label: 'Habits'),
     _PlaceholderScreen(emoji: '📖', label: 'Reads'),
     _PlaceholderScreen(emoji: '👤', label: 'Profile'),

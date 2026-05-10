@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:stayyoung/core/utils/prefs_helper.dart';
+import 'package:stayyoung/features/games/screens/word_recall_screen.dart';
 import '../widgets/greeting_header.dart';
 import '../widgets/quiz_banner_card.dart';
 import '../widgets/habit_row.dart';
@@ -72,13 +73,18 @@ class _HomeScreenState extends State<HomeScreen> {
             SliverToBoxAdapter(child: _SectionLabel(label: 'Brain games')),
             SliverList(
               delegate: SliverChildListDelegate([
-                const Padding(
-                  padding: EdgeInsets.fromLTRB(20, 0, 20, 10),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 10),
                   child: GameCard(
                     emoji: '🧩',
                     title: 'Word recall',
                     subtitle: '2 min · Memory',
-                    backgroundColor: Color(0xFFFFF3E0),
+                    backgroundColor: const Color(0xFFFFF3E0),
+                    onTap: () => Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => const WordRecallScreen(),
+                      ),
+                    ),
                   ),
                 ),
                 const Padding(

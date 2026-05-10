@@ -6,7 +6,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   // TODO: Remove this before release
-  await PrefsHelper.clearAll();
+  //await PrefsHelper.clearAll();
 
   final bool onboardingComplete = await PrefsHelper.isOnboardingComplete();
   runApp(StayYoungApp(onboardingComplete: onboardingComplete));
